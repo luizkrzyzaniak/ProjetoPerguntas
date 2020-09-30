@@ -12,27 +12,27 @@ class _PerguntaAppState extends State<PerguntaApp> {
       'texto': 'Qual é a sua cor favorita ?',
       'respostas': [
         {'texto': 'Vermelho', 'pontuacao': 10},
-        {'texto': 'Azul', 'pontuacao': 8},
-        {'texto': 'Verde', 'pontuacao': 4},
-        {'texto': 'Amarelo', 'pontuacao': 6},
+        {'texto': 'Azul', 'pontuacao': 5},
+        {'texto': 'Verde', 'pontuacao': 3},
+        {'texto': 'Amarelo', 'pontuacao': 1},
       ],
     },
     {
       'texto': 'Qual é o seu animal favorito ?',
       'respostas': [
         {'texto': 'Cachorro', 'pontuacao': 10},
-        {'texto': 'Gato', 'pontuacao': 8},
-        {'texto': 'Coelho', 'pontuacao': 6},
-        {'texto': 'Rato', 'pontuacao': 4},
+        {'texto': 'Gato', 'pontuacao': 5},
+        {'texto': 'Coelho', 'pontuacao': 3},
+        {'texto': 'Rato', 'pontuacao': 1},
       ],
     },
     {
       'texto': 'Qual é o seu esporte favorito ?',
       'respostas': [
         {'texto': 'Futebol', 'pontuacao': 10},
-        {'texto': 'Basquete', 'pontuacao': 8},
-        {'texto': 'Vôlei', 'pontuacao': 4},
-        {'texto': 'Tênis de Mesa', 'pontuacao': 6},
+        {'texto': 'Basquete', 'pontuacao': 5},
+        {'texto': 'Vôlei', 'pontuacao': 3},
+        {'texto': 'Tênis de Mesa', 'pontuacao': 1},
       ],
     }
   ];

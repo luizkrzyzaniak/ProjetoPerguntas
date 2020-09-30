@@ -10,7 +10,7 @@ class Resultado extends StatelessWidget {
     if (pontuacao < 10) {
       return 'Né, sua escolha!';
     } else if (pontuacao < 15) {
-      return 'Escolhei mais ou menos né';
+      return 'Mais ou menos né';
     } else if (pontuacao < 25) {
       return 'Boas escolhas, Parabéns';
     } else {
