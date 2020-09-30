@@ -6,27 +6,51 @@ main() => runApp(PerguntaApp());
 
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
+  var _pontuacaoTotal = 0;
   final _perguntas = const [
     {
       'texto': 'Qual é a sua cor favorita ?',
-      'respostas': ['Vermelho', 'Azul', 'Verde', 'Amarelo'],
+      'respostas': [
+        {'texto': 'Vermelho', 'pontuacao': 10},
+        {'texto': 'Azul', 'pontuacao': 8},
+        {'texto': 'Verde', 'pontuacao': 4},
+        {'texto': 'Amarelo', 'pontuacao': 6},
+      ],
     },
     {
       'texto': 'Qual é o seu animal favorito ?',
-      'respostas': ['Cachorro', 'Gato', 'Coelho', 'Rato'],
+      'respostas': [
+        {'texto': 'Cachorro', 'pontuacao': 10},
+        {'texto': 'Gato', 'pontuacao': 8},
+        {'texto': 'Coelho', 'pontuacao': 6},
+        {'texto': 'Rato', 'pontuacao': 4},
+      ],
     },
     {
       'texto': 'Qual é o seu esporte favorito ?',
-      'respostas': ['Futebol', 'Basquete', 'Vôlei', 'Tênis de Mesa'],
+      'respostas': [
+        {'texto': 'Futebol', 'pontuacao': 10},
+        {'texto': 'Basquete', 'pontuacao': 8},
+        {'texto': 'Vôlei', 'pontuacao': 4},
+        {'texto': 'Tênis de Mesa', 'pontuacao': 6},
+      ],
     }
   ];
 
-  void _responder() {
+  void _responder(int pontuacao) {
     if (temPerguntaSelecionada) {
       setState(() {
         _perguntaSelecionada++;
+        _pontuacaoTotal += pontuacao;
       });
     }
+  }
+
+  void _reiniciarQuestionario() {
+    setState(() {
+      _perguntaSelecionada = 0;
+      _pontuacaoTotal = 0;
+    });
   }
 
   bool get temPerguntaSelecionada {
@@ -46,7 +70,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 perguntaSelecionada: _perguntaSelecionada,
                 quandoResponder: _responder,
               )
-            : Resultado(),
+            : Resultado(_pontuacaoTotal, _reiniciarQuestionario),
       ),
     );
   }
